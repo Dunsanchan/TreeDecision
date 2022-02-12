@@ -30,6 +30,7 @@ def generate_edges(graph):
             edges.append((node, neighbour))
     return edges
 
+
 def find_path(graph, start, end, path=[]):
     path = path + [start]
     if start == end:
@@ -39,6 +40,8 @@ def find_path(graph, start, end, path=[]):
             newpath = find_path(graph, node, end, path)
             if newpath:
                 return newpath
+
+
 # function to generate all possible paths
 def find_all_paths(graph, start, end, path =[]):
   path = path + [start]
@@ -52,6 +55,7 @@ def find_all_paths(graph, start, end, path =[]):
       paths.append(newpath)
   return paths
  
+
 def main():
     print("Hello World!")
     addEdge(graph,'a','c')
@@ -65,6 +69,7 @@ def main():
     addEdge(graph,'d','c')
     addEdge(graph,'e','c')
     print(generate_edges(graph))
+
 
 if __name__ == "__main__":
     main()
